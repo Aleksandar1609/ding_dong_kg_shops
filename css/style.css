@@ -1,0 +1,113 @@
+body {
+    padding-top:100px;
+}
+#prvicol,input
+{
+    margin-top:10px;
+    width: 300px;
+}
+#prvicol,button
+{
+    margin-top:10px;
+}
+
+.plabel{
+    color: rgb(237, 237, 243);
+}
+#task_container,p{
+    color: black;
+}
+#task_data{
+  background-color:white;
+}
+
+#task_tool{
+      display: inline-block;
+      float: right;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  
+#task_done_button{
+      float:right;
+      height:30px;
+      width:30px;
+      cursor:pointer;
+      background-color:#5E6572;
+      border:none;
+      border-radius:20px;
+      outline:none;
+      margin-right: 5px;
+    }
+  
+#task_done_button:hover{
+      background-color:#75b79e;
+      color:white;
+    }
+  
+#task_done_button:active{
+      transform: translateY(4px);
+    }
+  
+#task_edit_button{
+      float:right;
+      height:30px;
+      width:30px;
+      cursor:pointer;
+      background-color:#5E6572;
+      border:none;
+      border-radius:20px;
+      outline:none;
+      margin-right: 5px;
+    }
+  
+    #task_edit_button_editing{
+      float:right;
+      height:30px;
+      width:30px;
+      cursor:pointer;
+      background-color:#ffed83;
+      color: white;
+      border:none;
+      border-radius:20px;
+      outline:none;
+      margin-right: 5px;
+    }
+    #task_edit_button:hover{
+      background-color:#ffed83;
+      color:white;
+    }
+    #task_edit_button:active{
+      transform: translateY(4px);
+    }
+  
+    #task_delete_button{
+      float:right;
+      height:30px;
+      width:30px;
+      cursor:pointer;
+      background-color:#5E6572;
+      border:none;
+      border-radius:20px;
+      outline:none;
+      margin-right: 5px;
+    }
+  
+    #task_delete_button:hover{
+      background-color:#fa163f;
+      color:white;
+    }
+  
+    #task_delete_button:active{
+      transform: translateY(4px);
+    }
+  #kvadrat{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    display: inline-block;
+  }
+  #task_broj{
+    font-size:40px;
+  }
