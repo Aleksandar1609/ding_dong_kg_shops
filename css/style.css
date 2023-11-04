@@ -111,3 +111,7 @@ body {
   #task_broj{
     font-size:40px;
   }
+
+#task_zona{
+  padding-top: 10px;
+}
