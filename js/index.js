@@ -84,6 +84,7 @@ button.addEventListener("click",function(){
         vreme:"Vreme potrebno da porudzbina stigne: "+vreme,
         korisnik:"Korisnik:"+korisnik,
         vremeporudzbine:"Vreme narucivanja: "+vremeporudzbine,
+        zona:'',
         key:key
       };
      
@@ -145,6 +146,7 @@ function create_unfinished_task(){
         task_stan=task_array[i][10];
         task_vreme=task_array[i][11];
         task_vremeporudzbine=task_array[i][12];
+        task_zona=task_array[i][13];
 
         var broj1=task_broj.slice(16);
       
@@ -213,10 +215,10 @@ function create_unfinished_task(){
         row2.setAttribute('class','row');
 
         col2=document.createElement('div');
-        col2.setAttribute('class','col-2');
+        col2.setAttribute('class','col-1');
 
         col22=document.createElement('div');
-        col22.setAttribute('class','col-2');
+        col22.setAttribute('class','col-3');
   
         col8=document.createElement('div');
         col8.setAttribute('class','col-8');
@@ -348,6 +350,8 @@ function create_unfinished_task(){
         col22.append(status1);
         col22.append(kvadratic);
         col22.append(task_tool);
+
+        col22.append(task_zona);
         
         task_tool.append(task_edit_button);
         task_edit_button.append(fa_edit);
