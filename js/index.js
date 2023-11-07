@@ -418,9 +418,6 @@ function vremeIsporuke(ulica, brojporudzbine) {
       task_isporuke2 = task_array2[j][13];
       if (ulica == task_ulica2 && task_brojtelefon2 == brojporudzbine) {
         ima = task_isporuke2;
-        if (task_brojtelefon2 == "Broj Porudzbine:39") {
-          console.log(ima);
-        }
       }
     }
   });
