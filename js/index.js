@@ -117,7 +117,6 @@ button.addEventListener("click", function () {
   }
 })
 
-
 function create_unfinished_task() {
   unfinished_task_container = document.getElementsByClassName("container1")[0];
   unfinished_task_container.innerHTML = "";
@@ -423,6 +422,7 @@ function vremeIsporuke(ulica, brojporudzbine) {
   });
   return ima;
 }
+
 function kvadratboja(ulica, kvadrat, brojporudzbine) {
   var zelena;
   task_array2 = [];
@@ -474,9 +474,8 @@ function task_edit(task, edit_button) {
   napomena = task.childNodes[1].childNodes[0].childNodes[0].childNodes[1].childNodes[0].childNodes[2].childNodes[0];
   napomena.setAttribute("contenteditable", true);
   napomena.setAttribute("id", "brojtelefona");
-
-
 }
+
 function finish_edit(task, edit_button) {
   edit_button.setAttribute("id", "task_edit_button");
   edit_button.setAttribute("onclick", "task_edit(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement, this)");
@@ -494,9 +493,6 @@ function finish_edit(task, edit_button) {
   napomena.setAttribute("contenteditable", false);
   napomena.setAttribute("id", "brojtelefona");
 
-
-
-  // change in firebase to
   var key = task.getAttribute("data-key");
 
   firebase.database().ref("/Porudzbina/" + key).update({
@@ -505,10 +501,7 @@ function finish_edit(task, edit_button) {
     napomena: task.childNodes[1].childNodes[0].childNodes[0].childNodes[1].childNodes[0].childNodes[2].childNodes[0].innerHTML,
     key: key,
   });
-
-
 }
-
 
 function task_delete(task) {
   var key = task.getAttribute("data-key");
@@ -517,11 +510,9 @@ function task_delete(task) {
 
   task.remove();
   create_unfinished_task();
-
 }
 
 firebase.database().ref("Brojac").on('value', function (snapshot) {
-
   task_array1 = [];
   firebase.database().ref("Brojac").once('value', function (snapshot) {
     snapshot.forEach(function (childSnapshot) {
@@ -532,21 +523,21 @@ firebase.database().ref("Brojac").on('value', function (snapshot) {
 
     task_brojac = task_array[task_array.length - 1][0];
     document.getElementById("broj").value = "Broj Porudzbine:" + task_brojac;
-
   });
 
 });
+
 firebase.database().ref("Porudzbina").on('value', function (snapshot) {
   create_unfinished_task();
 });
+
 firebase.database().ref("ZavrsenePorudzbine").on('value', function (snapshot) {
   create_unfinished_task();
 });
+
 firebase.database().ref("Brojac").orderByChild("key")
   .once("value", snapshot => {
-    // Check if it is a SHOP.
     if (snapshot.exists()) {
-
     }
     else {
       var i = 1;

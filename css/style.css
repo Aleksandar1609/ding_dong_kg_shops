@@ -115,3 +115,11 @@ body {
 #task_zona{
   padding-top: 10px;
 }
+
+@media (max-width: 678px) {
+  .task-container{
+    flex-direction: column;
+    height: auto;
+  }
+  
+}
